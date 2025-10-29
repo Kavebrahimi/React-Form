@@ -163,7 +163,7 @@ const Register = () => {
                 }
             </Formik>
             <div className='text-center mt-4 flex flex-col gap-1 bruno'>
-                <Link to={'/'} className='inline-block'>Already have an account? <span className='link-span'>LOGIN</span></Link>
+                <Link to={'/React-Form'} className='inline-block'>Already have an account? <span className='link-span'>LOGIN</span></Link>
             </div>
         </div>
     );

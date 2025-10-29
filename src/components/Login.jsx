@@ -63,7 +63,7 @@ const Login = () => {
             </Formik>
             <div className='text-center mt-4 flex flex-col gap-1 bruno'>
                 <a href="" className='form-link'>Forgot your password?</a>
-                <Link to={'/register'} className='inline-block'>Don't have an account? <span className='link-span'>SIGN UP</span></Link>
+                <Link to={'/React-Form/register'} className='inline-block'>Don't have an account? <span className='link-span'>SIGN UP</span></Link>
             </div>
         </div>
     );
