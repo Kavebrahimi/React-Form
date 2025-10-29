@@ -1,0 +1,93 @@
+    @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kotta+One&display=swap');
+    @import 'tailwindcss';
+
+    .bruno {
+    font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    .kotta {
+    font-family: "Kotta One", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    /* -------------------- Tailwind -------------------- */
+    @layer base {
+        body{
+            @apply bg-slate-900 text-white text-xs sm:text-sm md:text-base
+        }
+        #root{
+            @apply min-h-screen min-w-[95vw] py-20 grid place-items-center overflow-hidden
+        }
+        button{
+            @apply cursor-pointer
+        }
+        .form-container{
+            @apply p-8 rounded-sm bg-[#0c131e] w-[90%] sm:w-2/3 md:w-4/8 lg:w-4/12
+        }
+        h1{
+            @apply text-center text-2xl sm:text-3xl md:text-4xl
+        }
+        .form-input{
+            @apply placeholder:text-slate-400 w-full text-white bg-slate-500/30 outline-0 transition-all duration-300 ring-2 
+            ring-transparent focus:ring-blue-400 pr-2 pl-2 focus:pl-8 py-1.5 rounded-xs
+        }
+        .form-icon{
+            @apply w-4 h-4 md:w-6 md:h-6 absolute top-1/2 -translate-y-1/2 left-1 -translate-x-full opacity-0 peer-focus:opacity-100 
+            peer-focus:translate-x-0 transition-all duration-300
+        }
+        .form-btn{
+            @apply py-2 px-3.5 bg-blue-500 rounded-sm hover:bg-blue-600 transition-colors duration-200
+        }
+        .input-container{
+            @apply relative text-slate-400
+        }
+        .input-error{
+            @apply text-red-400 transition-all duration-500 opacity-0 inline-block min-h-5  pointer-events-none
+        }
+        .form-link{
+            @apply inline-block hover:text-blue-500
+        }
+        .link-span{
+            @apply text-blue-500 hover:underline decoration-1
+        }
+        .radio-btn{
+            @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600
+                dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600
+        }
+    }
+
+
+
+    /* -------------------- Css -------------------- */
+
+    body{
+        font-family: "Kotta One", serif;
+    }
+    .gradient-border {
+    --border-width: 4px;
+        position: relative;
+        border-radius: 10px;
+        
+    }
+    .gradient-border::after {
+        position: absolute;
+        content: "";
+        top: calc(-1 * var(--border-width));
+        left: calc(-1 * var(--border-width));
+        z-index: -1;
+        width: calc(100% + var(--border-width) * 2);
+        height: calc(100% + var(--border-width) * 2);
+        background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+        background-size: 300% 300%;
+        background-position: 0 50%;
+        border-radius: 10px;
+        animation: moveGradient 4s alternate infinite;
+    }
+
+    @keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+    }
